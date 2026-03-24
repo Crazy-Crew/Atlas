@@ -9,7 +9,7 @@ if (id === undefined) {
     return Astro.redirect("/404");
 }
 
-const post = await getEntry("blog", id);
+const post = await getEntry("docs", id);
 
 if (post === undefined) {
     return Astro.redirect("/404");
