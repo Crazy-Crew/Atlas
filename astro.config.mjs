@@ -1,0 +1,25 @@
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+import vercel from '@astrojs/vercel';
+
+import mdx from '@astrojs/mdx';
+
+// https://astro.build/config
+export default defineConfig({
+  site: 'https://docs.crazycrew.us/',
+
+  redirects: {
+      //'/blog/[...slug]': '/articles/[...slug]',
+      //'/about': 'https://example.com/about',
+      '/discord': {
+          status: 302,
+          destination: 'https://discord.gg/badbones-s-live-chat-182615261403283459',
+      },
+      // '/product1/', '/product1' // Note, this is not supported
+  },
+
+  output: 'server',
+  adapter: vercel(),
+  integrations: [mdx()]
+});
