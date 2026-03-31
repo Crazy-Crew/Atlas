@@ -5,6 +5,8 @@ import vercel from '@astrojs/vercel';
 
 import mdx from '@astrojs/mdx';
 
+import vue from '@astrojs/vue';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://docs.crazycrew.us/',
@@ -21,5 +23,5 @@ export default defineConfig({
 
   output: 'server',
   adapter: vercel(),
-  integrations: [mdx()]
+  integrations: [mdx(), vue()]
 });
