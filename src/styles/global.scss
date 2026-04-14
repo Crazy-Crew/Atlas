@@ -1,6 +1,28 @@
-html, body {
-  min-height: 100lvh;
+$bg-dark: oklch(0.28 0.02 242);
+$bg-extra: oklch(0.33 0.03 247);
+$bg: oklch(0.255 0.02 211);
 
-  margin: 0;
-  padding: 0;
+$primary: #ea3a5e;
+$text: #FFFFFF;
+
+html, body {
+  min-height: 100dvh;
+}
+
+body {
+  font-family: "Montserrat", serif;
+
+  background-color: $bg;
+
+  font-size: 1rem;
+  color: $text;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+}
+
+a:hover {
+  color: $primary;
 }
