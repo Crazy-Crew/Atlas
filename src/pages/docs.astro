@@ -1,17 +1,26 @@
 ---
+import Layout from "../layouts/layout.astro";
 
+import { getCollection } from 'astro:content';
+import Card from "../components/ui/card.astro";
+
+//const posts = await getCollection('docs');
 ---
 
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-</head>
-<body>
-<h1>Astro</h1>
-</body>
-</html>
+<Layout title="Docs" description="The documentation index, which contains the getting started information.">
+    <!--<ul>
+        {posts.map(post => (
+                <li><a href={`/docs/${post.id}`}>{post.data.title}</a></li>
+        ))}
+    </ul>-->
+
+    <div class="CardLayout">
+        <!--<Card color="oklch(0.33 0.04 211)"/>-->
+    </div>
+</Layout>
+
+<style lang="scss">
+    .CardLayout {
+
+    }
+</style>

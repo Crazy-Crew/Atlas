@@ -2,6 +2,7 @@
 export const prerender = false; // Not needed in 'server' mode
 
 import { getEntry, render } from "astro:content";
+import Layout from "../../layouts/layout.astro";
 
 const { id } = Astro.params;
 
@@ -17,5 +18,10 @@ if (post === undefined) {
 
 const { Content } = await render(post);
 ---
-<h1>{post.data.title}</h1>
-<Content />
+<Layout title={post.data.title} description={post.data.description}>
+    <h1>{post.data.title}</h1>
+    <h2>{post.data.description}</h2>
+    <h3>{post.data.pubDate}</h3>
+
+    <Content/>
+</Layout>

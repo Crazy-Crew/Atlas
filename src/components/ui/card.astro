@@ -1,0 +1,14 @@
+---
+const { color } = Astro.props;
+---
+<div class="card">
+
+</div>
+<style lang="scss" define:vars={{ color }}>
+    .card {
+      background-color: var(--color);
+
+      height: 15rem;
+      width: 25rem;
+    }
+</style>
