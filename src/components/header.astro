@@ -10,14 +10,14 @@ import Kofi from "../../public/assets/icons/kofi.svg";
         <a href="https://ko-fi.com/ryderbelserion"><Kofi fill="currentColor"/></a>
     </div>
 
-    <div class="center">
+    <div class="center-grid">
         <a href="/" aria-label="home">Home</a>
         <a href="/docs" aria-label="docs">Docs</>
-        <a href="/builds" aria-label="builds">Builds</a>
+        <a href="https://modrinth.com/organization/crazycrews" aria-label="builds">Builds</a>
     </div>
 
-    <div class="right">
-        <span>Hi</span>
+    <div class="right-grid">
+
     </div>
 </header>
 
@@ -29,15 +29,19 @@ import Kofi from "../../public/assets/icons/kofi.svg";
 
         display: flex;
 
+        height: 2rem;
+
         justify-content: center;
         align-items: center;
 
-        background-color: green;
+        padding: $spacing;
 
-        .center {
+        .center-grid {
             a {
                 padding: 10px;
             }
+
+            font-size: 1.2rem;
 
             display: flex;
             justify-content: center;
@@ -62,8 +66,7 @@ import Kofi from "../../public/assets/icons/kofi.svg";
             }
         }
 
-        .right {
-            background-color: orangered;
+        .right-grid {
             flex: 1;
         }
     }
