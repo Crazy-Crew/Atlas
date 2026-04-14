@@ -1,10 +1,13 @@
 ---
-
+import Discord from '../../public/assets/icons/discord.svg';
+import Kofi from "../../public/assets/icons/kofi.svg";
 ---
 
 <header>
-    <div class="left">
-        <span>Hi</span>
+    <div class="left-grid">
+        <a href="https://discord.com/servers/badbones-s-live-chat-182615261403283459"><Discord fill="currentColor"/></a>
+
+        <a href="https://ko-fi.com/ryderbelserion"><Kofi fill="currentColor"/></a>
     </div>
 
     <div class="center">
@@ -37,11 +40,23 @@
             flex: 2;
         }
 
-        .left {
-            background-color: orangered;
+        .left-grid {
             flex: 1;
-        }
 
+            display: flex;
+            gap: $spacing;
+
+            svg {
+              display: flex;
+
+              height: 26px;
+              width: 26px;
+            }
+
+            svg:hover {
+              fill: $primary;
+            }
+        }
 
         .right {
             background-color: orangered;
