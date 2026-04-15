@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import vercel from '@astrojs/vercel';
+import cloudflare from '@astrojs/cloudflare';
 
 import mdx from '@astrojs/mdx';
 
@@ -22,6 +22,6 @@ export default defineConfig({
   },
 
   output: 'server',
-  adapter: vercel(),
+  adapter: cloudflare(),
   integrations: [mdx(), vue()]
 });
